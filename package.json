@@ -1,0 +1,31 @@
+{
+  "name": "protools-desktop",
+  "version": "1.0.0",
+  "description": "This is just a test",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "keywords": [],
+  "author": "Abdumalik",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^23.6.0",
+    "electron-updater": "^5.3.0"
+  },
+  "build": {
+    "appId": "uz.ecorp.protools",
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "publish":["github"]
+    }
+  }
+}
